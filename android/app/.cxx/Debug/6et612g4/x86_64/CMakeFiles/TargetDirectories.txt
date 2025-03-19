@@ -1,0 +1,2 @@
+C:/Users/omaff/Downloads/e_commerce-main/e_commerce-main/android/app/.cxx/Debug/6et612g4/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/omaff/Downloads/e_commerce-main/e_commerce-main/android/app/.cxx/Debug/6et612g4/x86_64/CMakeFiles/rebuild_cache.dir
