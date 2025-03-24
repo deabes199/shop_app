@@ -14,7 +14,7 @@ class CartCheckout extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AddCartsCubit, AddCartsState>(
       builder: (context, state) {
-        final cartCubit = context.watch<AddCartsCubit>();
+        final cartCubit = context.read<AddCartsCubit>();
         double totalPrice = cartCubit.totalPriceInCart(cartCubit.cartList);
         int totalItems = cartCubit.totalItemsInCart(cartCubit.cartList);
         return Container(

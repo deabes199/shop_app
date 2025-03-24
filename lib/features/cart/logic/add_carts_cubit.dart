@@ -1,6 +1,8 @@
+// ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
 import 'package:hero_store_app/core/database/hive_service.dart';
 import 'package:hero_store_app/features/cart/data/model/cart_model.dart';
+// ignore: depend_on_referenced_packages
 import 'package:meta/meta.dart';
 
 part 'add_carts_state.dart';
