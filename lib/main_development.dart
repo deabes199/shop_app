@@ -23,13 +23,10 @@ bool isLoggedInUser = false;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-
   await ScreenUtil.ensureScreenSize();
-
   await setUpGetIt();
   await getIt<CacheHelper>().init();
   await HelperFunctions.checkIfLoggedInUser();
@@ -38,14 +35,9 @@ void main() async {
   await Hive.deleteFromDisk();
   Hive.registerAdapter(FavoriteModelAdapter());
   Hive.registerAdapter(CartModelAdapter());
-
   Hive.registerAdapter(SignupResponseModelAdapter());
-  await Hive.openBox<SignupResponseModel>('user');
-
   await HiveServices.init();
-
   Bloc.observer = MyBlocObserver();
-
   runApp(
     MyApp(
       appRouter: AppRouter(),
@@ -56,7 +48,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   final AppRouter appRouter;
   const MyApp({super.key, required this.appRouter});
-
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
