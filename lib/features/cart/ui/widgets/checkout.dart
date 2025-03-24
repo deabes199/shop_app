@@ -15,8 +15,8 @@ class CartCheckout extends StatelessWidget {
     return BlocBuilder<AddCartsCubit, AddCartsState>(
       builder: (context, state) {
         final cartCubit = context.read<AddCartsCubit>();
-        double totalPrice = cartCubit.totalPriceInCart(cartCubit.cartList);
-        int totalItems = cartCubit.totalItemsInCart(cartCubit.cartList);
+        double totalPrice = cartCubit.totalPriceInCart();
+        int totalItems = cartCubit.totalItemsInCart();
         return Container(
           padding: const EdgeInsets.all(15),
           margin: EdgeInsets.only(top: 8.h),

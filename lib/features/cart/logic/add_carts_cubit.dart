@@ -74,17 +74,17 @@ class AddCartsCubit extends Cubit<AddCartsState> {
     emit(ClearCartSuccess(products: cartList));
   }
 
-  double totalPriceInCart(List<CartModel> items) {
+  double totalPriceInCart() {
     double total = 0;
-    for (CartModel cart in items) {
+    for (CartModel cart in cartList) {
       total += (cart.price ?? 0) * cart.quantity;   
     }
     return total;      
   }
 
-  int totalItemsInCart(List<CartModel> items) {
+  int totalItemsInCart() {
     int total = 0;
-    for (CartModel cart in items) {
+    for (CartModel cart in cartList) {
       total += cart.quantity;
     }
     return total;
